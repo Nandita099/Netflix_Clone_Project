@@ -1,0 +1,335 @@
+/* Define root variables for color scheme */
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+    --light-color: #f4f4f4;
+}
+
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000000;
+    color: #999999;
+}
+
+/* Remove bullet points from lists */
+ul {
+    list-style: none;
+}
+
+/* Set heading colors to white */
+h1, h2, h3, h4 {
+    color: #ffffff;
+}
+
+/* Lighter font-weight for h3 */
+h3 {
+    font-weight: lighter;
+}
+
+/* Link styling */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Paragraph styling */
+p {
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Images take full width */
+img {
+    width: 100%;
+}
+
+/* Showcase section with background image and dark overlay */
+.showcase {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url("1.jpg") no-repeat center center/cover;
+}
+
+/* Dark transparent layer over showcase background */
+.showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+/* Top part of showcase: logo and sign in button */
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+}
+
+/* Logo positioning */
+.showcase-top img {
+    width: 140px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(40%, -50%);
+}
+
+/* Sign in button positioning */
+.showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-60%, -50%);
+}
+
+/* Showcase main content (headings, input) */
+.showcase-content {
+    position: relative;
+    margin: 0 26%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 9rem;
+}
+
+/* Showcase headings styling */
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 64px;
+    margin: 0 30px;
+    max-width: 800px;
+    line-height: 74.5px;
+}
+
+/* Sub-heading styling */
+.showcase-content h3 {
+    color: white;
+    font-size: 25px;
+    margin: 16px 0;
+}
+
+/* Paragraph inside showcase */
+.showcase-content p {
+    font-size: 19.2px;
+    font-weight: 300;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+/* Email input box */
+.showcase-content input {
+    position: absolute;
+    left: 0;
+    bottom: -8vh;
+    width: 454px;
+    height: 3rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* Common button styling */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.45);
+}
+
+/* Button hover effect */
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Rounded button */
+.btn-rounded {
+    border-radius: 5px;
+}
+
+/* Larger button */
+.showcase-content .btn-lg {
+    position: absolute;
+    right: 0;
+    bottom: -8vh;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    height: 36px;
+    width: 14rem;
+}
+
+/* Cards section styles */
+.card-0, .card-1, .card-2, .card-3 {
+    border-top: 8px rgb(69, 69, 69) solid;
+    padding: 50px;
+}
+
+/* Each card layout with image and text */
+.card-0, .card-2 {
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+/* Text description inside cards */
+.desc-0, .desc-2 {
+    padding-left: 100px;
+}
+
+/* Card 1 and 3 layout reversed */
+.card-1, .card-3 {
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items: center;
+    padding: 25px 45px 50px;
+}
+
+/* Description padding for card-1 and card-3 */
+.desc-1 {
+    padding-left: 80px;
+}
+.desc-3 {
+    padding-left: 80px;
+    padding-right: 20px;
+}
+
+/* Video positioning in card 1 */
+.card-1 video {
+    position: relative;
+    width: 100%;
+    height: 54%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    z-index: -1;
+}
+
+/* Card-3 video positioning */
+.card-3 video {
+    position: relative;
+    top: -87px;
+    left: 125px;
+    width: 65%;
+    height: 78%;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    z-index: -1;
+}
+
+/* FAQ Section */
+.faq {
+    text-align: center;
+}
+
+/* FAQ Heading */
+.faq h1 {
+    padding-bottom: 40px;
+    font-size: 3rem;
+}
+
+/* FAQ Questions */
+.questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Individual question styling */
+.questions li {
+    padding: 20px 30px;
+    margin: 5px;
+    font-size: 1.6rem;
+    background-color: #303030;
+    color: white;
+    text-align: left;
+    width: 50%;
+}
+
+/* FAQ Subtext */
+.faq p {
+    padding-top: 60px;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+/* FAQ input form */
+.input {
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 50% 40%;
+}
+
+/* Email input box */
+.input input {
+    width: 600px;
+    height: 3rem;
+}
+
+/* Get started button inside FAQ */
+.input button {
+    height: 3.25rem;
+    width: 320px;
+    text-align: center;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+
+/* Footer styling */
+.footer {
+    max-width: 70%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+/* Footer text and links */
+.footer, .footer a {
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+/* Footer text margin */
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+/* Footer grid layout */
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+/* Footer links */
+.footer li {
+    line-height: 2.4;
+}
